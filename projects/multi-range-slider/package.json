@@ -1,6 +1,11 @@
 {
   "name": "multi-range-slider",
   "version": "0.0.1",
+  "auther": "Vijay Kumar",
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/vijayliebe/angular2Plus_multi_range_slider.git"
+  },
   "peerDependencies": {
     "@angular/common": "^9.1.9",
     "@angular/core": "^9.1.9"
