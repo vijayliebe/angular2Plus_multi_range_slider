@@ -12,12 +12,12 @@ it's better...
 
 To add the slider to your Angular project:
 ```
-npm install --save multi-range-slider
+npm i @vijayliebe/multi-range-slider
 ```
 
 Once installed, add the slider to your `app.module.ts`:
 ```typescript
-import { MultiRangeSliderModule } from 'multi-range-slider';
+import { MultiRangeSliderModule } from '@vijayliebe/multi-range-slider';
 
 ...
 
@@ -71,4 +71,4 @@ ng serve multiRangeSliderTest
 
 # Demo
 
-[Demo Link](https://stackblitz.com/edit/angular-tpwn5x)
+[Demo Link](https://stackblitz.com/edit/angular-ivy-aqcdhv)

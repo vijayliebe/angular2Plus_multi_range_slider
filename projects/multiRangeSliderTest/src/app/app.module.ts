@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { MultiRangeSliderModule } from 'multi-range-slider';
+import { MultiRangeSliderModule } from '@vijayliebe/multi-range-slider';
 import { AppComponent } from './app.component';
 
 @NgModule({
