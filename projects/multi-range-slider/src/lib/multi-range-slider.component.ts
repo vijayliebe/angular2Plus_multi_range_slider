@@ -4,7 +4,7 @@ import {
 } from '@angular/core';
 
 import { DOCUMENT } from '@angular/common';
-
+/** @dynamic */
 @Component({
   selector: 'app-multi-range-slider',
   templateUrl: './multi-range-slider.component.html',
