@@ -1,27 +1,74 @@
-# SliderWidget
+# multi-range-slider
+slider component for Angular 2+
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
+# Motivating use-case
+I needed a slider that could be used to choose choose a list of probabilities that always add up to 1.  
+I could have used a text input or slider for each probability and link it up so that changing one would
+update the others, but that's a fairly clunky interaction.   This approach isn't perfect, but I think
+it's better...
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Installation
 
-## Code scaffolding
+To add the slider to your Angular project:
+```
+npm install --save multi-range-slider
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Once installed, add the slider to your `app.module.ts`:
+```typescript
+import { MultiRangeSliderModule } from 'multi-range-slider';
 
-## Build
+...
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+@NgModule({
+   ...
+   imports: [
+     ...
+     MultiRangeSliderModule,
+    ...
+   ],
+   ...
+})
+export class AppModule {}
+```
 
-## Running unit tests
+## Sample usage
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Now you can use the slider component in your app components, for example in `app.component.ts`:
+```typescript
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+@Component({...})
+export class AppComponent {
+  count = 5;
+  variants = [];
+  public colors: any = ['#d8d8d8', '#83db8e', '#30d6c5', '#81bbe4',
+                        '#869bcc', '#d69dce', '#bd78a2', '#c66561',
+                        '#c66561', '#f2ad47', '#ffd54f'];
 
-## Further help
+  ngOnInit() {
+    for(let i = 0; i < this.count; i++){
+        this.variants.push({value : 100/this.count});
+    }
+  }
+}
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+And in template file `app.component.html`:
+```html
+<app-multi-range-slider [variants]="variants" [prop]="'value'" [colorList]="colors"></app-multi-range-slider>
+
+<div *ngFor="let variant of variants; let i = index;">
+ Variant {{i+1}} : &nbsp; {{variant.value}}%
+</div>
+```
+
+## Sample App to test
+```
+ng serve multiRangeSliderTest
+```
+
+# Demo
+
+[Demo Link](https://stackblitz.com/edit/angular-tpwn5x)

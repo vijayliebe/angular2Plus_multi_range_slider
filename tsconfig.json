@@ -14,7 +14,13 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "multi-range-slider": [
+        "dist/multi-range-slider/multi-range-slider",
+        "dist/multi-range-slider"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
