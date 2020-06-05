@@ -1,0 +1,7 @@
+<h3>Multi Range Slider</h3>
+
+<app-multi-range-slider [variants]="variants" [prop]="'value'" [colorList]="colors"></app-multi-range-slider>
+
+<div *ngFor="let variant of variants; let i = index;">
+ Variant {{i+1}} : &nbsp; {{variant.value}}%
+</div>

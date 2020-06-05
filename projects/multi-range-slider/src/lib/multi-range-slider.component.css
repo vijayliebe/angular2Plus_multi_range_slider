@@ -1,0 +1,36 @@
+.slider-control {
+  width: 100%;
+  margin-bottom: 3em;
+  margin-top: 3em;
+  position: relative;
+}
+
+.slider {
+  position: relative; 
+  display:inline-block;
+  height: 2.5px;
+  box-sizing: border-box;
+  vertical-align: top;
+  background: #ccc;
+}
+
+.slider-handle-cont{
+  margin-top: -18px;
+  position: relative;
+}
+
+.slider-handle {
+    position: absolute;
+    top:-8px;
+    height: 15px;
+    width: 15px;
+    background: #fff;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #014666 !important;
+    z-index: 10!important;
+}
+
+.slider-handle:hover {
+  background: #ddd;
+}

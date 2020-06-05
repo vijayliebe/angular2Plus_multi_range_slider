@@ -1,0 +1,22 @@
+<div class="slider-control">
+  <ng-container *ngFor="let variant of variants; let i=index;" >
+    <div class="slider" [ngStyle]="{'width' : variant[prop]+'%', 'background-color' : colorList[i] }">
+    </div>
+  </ng-container>
+
+  <div class="slider-handle-cont">
+    <ng-container *ngFor="let variant of variants; let i=index;">
+        <div class="slider-handle" 
+            *ngIf="i < variants.length -1"
+            [ngStyle]="{'left' : getLeftOffset(i)+'%' }"
+          (mousedown)="mousedown($event, i)">
+        </div>
+    </ng-container>
+  </div>
+</div>
+
+
+
+
+
+
